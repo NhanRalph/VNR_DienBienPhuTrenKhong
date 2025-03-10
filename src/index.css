@@ -1,0 +1,147 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Đảm bảo toàn bộ trang chiếm toàn bộ màn hình */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/* 📌 Container chính của các trang */
+.fullscreen-container {
+  width: 100vw;
+  min-height: 100vh; /* Đảm bảo nội dung luôn chiếm toàn màn hình */
+  display: flex;
+  flex-direction: column; /* Giúp nội dung căn giữa theo chiều dọc tốt hơn */
+  align-items: center;
+  justify-content: center;
+  background-color: #121212; /* Màu nền tối hơn để tạo chiều sâu */
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 100px;
+}
+
+/* 📌 Nội dung hiển thị đẹp mắt */
+.content {
+  width:80%;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12); /* Hiệu ứng nền trong suốt */
+  backdrop-filter: blur(12px); /* Tăng độ mờ nền để làm nổi bật nội dung */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease-in-out; /* Hiệu ứng khi hiển thị */
+}
+
+.content:hover {
+  transform: translateY(-5px); /* Hiệu ứng nổi nhẹ khi hover */
+}
+
+/* 📌 Định nghĩa chiều cao tùy biến */
+.context-height-80 {
+  min-height: 80vh;
+}
+
+/* 📌 Nút bấm - Cải tiến hover & hiệu ứng */
+button {
+  background: linear-gradient(135deg, #ff5733, #c70039); /* Hiệu ứng gradient */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #c70039, #900c3f); /* Đổi màu khi hover */
+  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ */
+}
+
+/* 📌 Responsive cho Mobile */
+@media (max-width: 768px) {
+  .fullscreen-container {
+    padding-top: 140px;
+  }
+
+  .content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  button {
+    width: 100%; /* Nút bấm sẽ chiếm hết chiều rộng trên mobile */
+    padding: 10px;
+    font-size: 14px;
+  }
+}
