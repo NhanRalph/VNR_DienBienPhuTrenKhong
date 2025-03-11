@@ -2,16 +2,6 @@ import "./Memorial.css";
 
 const heroes = [
   {
-    name: "Nguyễn Văn C",
-    role: "Phi công MiG-21",
-    sacrifice: "Hy sinh khi tấn công B-52",
-  },
-  {
-    name: "Trần Đức B",
-    role: "Chỉ huy pháo cao xạ",
-    sacrifice: "Hy sinh tại trận địa Yên Viên",
-  },
-  {
     name: "Phạm Tuân",
     role: "Phi công MiG-21",
     sacrifice: "Bắn hạ B-52 đầu tiên",
