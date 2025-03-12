@@ -4,7 +4,7 @@ const ChatWithAI = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
 
-  const API_KEY = "AIzaSyBFE5KLAqjHRa4nRyqWzlTxLEb8LPGHlnI";
+  const API_KEY = import.meta.env.VITE_API_KEY_GEMINI;
   const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
   const formatText = (text) => {
