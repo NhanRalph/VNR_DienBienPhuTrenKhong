@@ -103,7 +103,7 @@ export default function MemorialPage() {
   return (
     <div className="fullscreen-container">
       <div className="content">
-        <h1>🕊️ Trang tưởng niệm</h1>
+        <h1 style={{margin: "0"}}>Trang tưởng niệm</h1>
         <p>Danh sách những người anh hùng đã hy sinh vì Hà Nội.</p>
 
         <ul
@@ -132,7 +132,7 @@ export default function MemorialPage() {
           ))}
         </ul>
 
-        <h2>📸 Hình ảnh lịch sử</h2>
+        <h2>Hình ảnh lịch sử</h2>
         <div className="image-gallery">
           {historicalImages.map((image, index) => (
             <div key={index} className="image-item">

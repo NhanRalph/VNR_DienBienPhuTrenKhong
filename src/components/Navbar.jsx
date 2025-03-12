@@ -30,19 +30,22 @@ export default function Navbar() {
         }}
       >
         <Link to="/" onClick={() => setIsOpen(false)} style={styles.link}>
-          🏠 Trang chủ
+          Trang chủ
         </Link>
         <Link to="/battle-map" onClick={() => setIsOpen(false)} style={styles.link}>
-          🗺️ Bản đồ trận đánh
+          Bản đồ trận đánh
         </Link>
         <Link to="/testimonies" onClick={() => setIsOpen(false)} style={styles.link}>
-          🎙️ Nhân chứng
+          Nhân chứng
         </Link>
         <Link to="/memorial" onClick={() => setIsOpen(false)} style={styles.link}>
-          🕊️ Tưởng niệm
+          Tưởng niệm
         </Link>
         <Link to="/interactive" onClick={() => setIsOpen(false)} style={styles.link}>
-          🎮 Tương tác
+          Tương tác
+        </Link>
+        <Link to="/discovery" onClick={() => setIsOpen(false)} style={styles.link}>
+          Khám phá
         </Link>
       </div>
     </nav>
@@ -63,6 +66,7 @@ const styles = {
     background: "#222",
     color: "white",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+    opacity: 0.8,
     zIndex: 1000,
   },
   navLinks: {

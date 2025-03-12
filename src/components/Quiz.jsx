@@ -61,7 +61,7 @@ export default function Quiz() {
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
+    <div style={{textAlign: "center", paddingBottom: "20px" }}>
       <h3>--------------------------------------</h3>
       <h2>{questions[currentQuestion].question}</h2>
       <input
@@ -86,7 +86,7 @@ export default function Quiz() {
         </div>
       )}
 
-      {showAnswer && <p style={{ fontSize: "20px", fontWeight: "bold", color: "red" }}>Đáp án: {questions[currentQuestion].answer}</p>}
+      {showAnswer && <p style={{ textAlign: 'center', fontSize: "20px", fontWeight: "bold"}}>Đáp án: {questions[currentQuestion].answer}</p>}
     </div>
   );
 }

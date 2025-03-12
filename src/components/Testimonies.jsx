@@ -76,8 +76,7 @@ export default function Testimonies() {
 
   return (
     <div style={{ maxWidth: "600px", margin: "auto", textAlign: "center", padding: "20px" }}>
-      <h1 style={{marginTop: "0"}}>📜 Lời chứng</h1>
-      <div style={{ border: "1px solid #ddd", padding: "20px", borderRadius: "10px", background: "#f9f9f9", color: "#333" }}>
+      <div style={{padding: "20px", borderRadius: "10px", background: "#f9f9f950", color: "#333" }}>
         <h3 style={{color: "#CC0000", fontSize: "30px"}}>{testimonies[index].name}</h3>
         <p><strong>{testimonies[index].role}</strong></p>
         <p>"{testimonies[index].testimony}"</p>

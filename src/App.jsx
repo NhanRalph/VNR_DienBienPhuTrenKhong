@@ -5,6 +5,7 @@ import TestimoniesPage from "./pages/Testimonies";
 import InteractivePage from "./pages/InteractivePage";
 import MemorialPage from "./pages/MemorialPage";
 import Home from "./pages/Home";
+import DiscoveryPage from "./pages/Discovery";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/testimonies" element={<TestimoniesPage />} />
         <Route path="/interactive" element={<InteractivePage />} />
         <Route path="/memorial" element={<MemorialPage />} />
+        <Route path="/discovery" element={<DiscoveryPage />} />
       </Routes>
     </Router>
   );

@@ -82,8 +82,8 @@ html, body, #root {
   flex-direction: column; /* Giúp nội dung căn giữa theo chiều dọc tốt hơn */
   align-items: center;
   justify-content: center;
-  background-color: #121212; /* Màu nền tối hơn để tạo chiều sâu */
-  color: white;
+  background: url('https://static.kinhtedothi.vn/images/upload/2022/12/17/cuu-kho-o-cang-hai-phong-1972.jpg') center/cover repeat; /* Hình nền fullwidth */
+  color: #ccc;
   text-align: center;
   box-sizing: border-box;
   padding-top: 100px;
@@ -91,13 +91,14 @@ html, body, #root {
 
 /* 📌 Nội dung hiển thị đẹp mắt */
 .content {
-  width:80%;
+  width: 80%;
   padding: 20px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.12); /* Hiệu ứng nền trong suốt */
+  background: rgba(0, 0, 0, 0.3); /* Hiệu ứng nền trong suốt */
   backdrop-filter: blur(12px); /* Tăng độ mờ nền để làm nổi bật nội dung */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
   transition: transform 0.3s ease-in-out; /* Hiệu ứng khi hiển thị */
+  /* opacity: 0.5; Làm mờ content để nhìn thấy background */
 }
 
 .content:hover {
@@ -143,5 +144,9 @@ button:hover {
     width: 100%; /* Nút bấm sẽ chiếm hết chiều rộng trên mobile */
     padding: 10px;
     font-size: 14px;
+  }
+
+  button.noW100 {
+    width: auto !important;
   }
 }
