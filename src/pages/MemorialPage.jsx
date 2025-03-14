@@ -12,11 +12,6 @@ const heroes = [
     sacrifice: "Lao thẳng vào B-52 để tiêu diệt",
   },
   {
-    name: "Nguyễn Văn Bảy",
-    role: "Phi công huyền thoại",
-    sacrifice: "Lập chiến công bắn rơi nhiều máy bay địch",
-  },
-  {
     name: "Lê Văn Trọng",
     role: "Trung đội trưởng phòng không",
     sacrifice: "Bảo vệ Hà Nội trong đêm oanh tạc",
