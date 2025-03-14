@@ -7,6 +7,11 @@ const heroes = [
     sacrifice: "Bắn hạ B-52 đầu tiên",
   },
   {
+    name: "Vũ Xuân Thiều",
+    role: "Phi công MiG-21",
+    sacrifice: "Lao thẳng vào B-52 để tiêu diệt",
+  },
+  {
     name: "Nguyễn Văn Bảy",
     role: "Phi công huyền thoại",
     sacrifice: "Lập chiến công bắn rơi nhiều máy bay địch",
@@ -35,11 +40,6 @@ const heroes = [
     name: "Hoàng Văn Khánh",
     role: "Lính phòng không",
     sacrifice: "Chiến đấu tại trận địa Cầu Diễn",
-  },
-  {
-    name: "Vũ Xuân Thiều",
-    role: "Phi công MiG-21",
-    sacrifice: "Lao thẳng vào B-52 để tiêu diệt",
   },
   {
     name: "Lê Hải",

@@ -32,11 +32,14 @@ export default function Navbar() {
         <Link to="/" onClick={() => setIsOpen(false)} style={styles.link}>
           Trang chủ
         </Link>
+        <Link to="/battle-timeline" onClick={() => setIsOpen(false)} style={styles.link}>
+          Diễn biến trận đánh
+        </Link>
         <Link to="/battle-map" onClick={() => setIsOpen(false)} style={styles.link}>
           Bản đồ trận đánh
         </Link>
-        <Link to="/testimonies" onClick={() => setIsOpen(false)} style={styles.link}>
-          Nhân chứng
+        <Link to="/boeing" onClick={() => setIsOpen(false)} style={styles.link}>
+          Lực lượng không quân
         </Link>
         <Link to="/memorial" onClick={() => setIsOpen(false)} style={styles.link}>
           Tưởng niệm

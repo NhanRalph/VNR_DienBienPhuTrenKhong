@@ -11,7 +11,10 @@ const videos = [
 export default function BattleVideos() {
   return (
     <div style={{ textAlign: "center", padding: "20px" }}>
-      <h2>📽️ Video Tư Liệu: Trận Điện Biên Phủ Trên Không</h2>
+      <h5>Sau nhiều thất bại trên chiến trường miền Nam và bế tắc trong đàm phán tại Hội nghị Paris, Mỹ quyết định thực hiện chiến dịch ném bom quy mô lớn nhằm gây sức ép buộc Việt Nam ký kết hiệp định theo điều kiện của Mỹ.
+      </h5>
+      <h5>Mỹ sử dụng máy bay chiến lược B-52 – loại máy bay ném bom hiện đại và uy lực nhất lúc bấy giờ, cùng với các loại máy bay chiến thuật khác.s</h5>
+      <h2>Video Tư Liệu: Trận Điện Biên Phủ Trên Không</h2>
       <div style={styles.videoContainer}>
         {videos.map((video, index) => (
           <div key={index} style={styles.videoItem}>

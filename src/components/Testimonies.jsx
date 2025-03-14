@@ -1,88 +1,118 @@
-import { useState } from "react";
+export default function Aircrafts() {
+  const vnOverview = "Không quân Nhân dân Việt Nam chủ yếu sử dụng các máy bay tiêm kích MiG với số lượng nhỏ hơn đối thủ, nhưng có lợi thế về phòng không và chiến thuật đánh chặn.";
+  const usOverview = "Không quân Mỹ triển khai số lượng lớn máy bay ném bom chiến lược B-52 cùng với các tiêm kích và máy bay hỗ trợ hiện đại, tạo ưu thế về hỏa lực và sức mạnh tấn công.";
 
-const testimonies = [
-    {
-      id: 1,
-      name: "Phạm Tuân",
-      role: "Trung tướng - Phi công thuộc Trung đoàn Không quân 921, người đầu tiên bắn rơi máy bay B-52 của Mỹ trong chiến dịch.",
-      testimony: "Tôi không thể nào quên ngày 19-7-1965, khi đến thăm Trung đoàn 324 bộ đội phòng không - không quân, Bác Hồ nói: 'Dù đế quốc Mỹ lắm súng, nhiều tiền; dù chúng có B57, B52 hay 'bê' gì đi nữa, ta cũng đánh. Từng ấy máy bay, từng ấy quân Mỹ, chứ nhiều hơn nữa, ta cũng đánh. Mà đã đánh là nhất định thắng'.",
-    },
-    {
-      id: 2,
-      name: "Nghiêm Đình Tích",
-      role: "Đại tá - Anh hùng Lực lượng Vũ trang Nhân dân, nguyên Đài trưởng P-35, Đại đội 45, Trung đoàn 291, Sư đoàn 365, Quân chủng Phòng không-Không quân.",
-      testimony: "Tôi vô cùng tự hào trước thắng lợi của Chiến dịch 'Hà Nội-Điện Biên Phủ trên không' vĩ đại của quân và dân Thủ đô cũng như cả dân tộc, trong đó lực lượng Phòng không-Không quân là nòng cốt.",
-    },
-    {
-      id: 3,
-      name: "Võ Nguyên Giáp",
-      role: "Đại tướng - Tổng Tư lệnh Quân đội Nhân dân Việt Nam, người đã chỉ đạo chiến dịch.",
-      testimony: "Chúng tôi đã cất cánh và đối đầu với B-52 ngay trên bầu trời Hà Nội, một nhiệm vụ đầy cam go.",
-    },
-    {
-      id: 4,
-      name: "Nguyễn Văn Phiệt",
-      role: "Đại tá - Nguyên Trung đoàn trưởng Trung đoàn Tên lửa 257, Quân chủng Phòng không - Không quân.",
-      testimony: "Đêm 27/12/1972, chúng tôi bắn rơi tại chỗ một chiếc B-52, đó là một niềm vui lớn lao không thể tả xiết.",
-    },
-    {
-      id: 5,
-      name: "Phạm Tuyên",
-      role: "Nhạc sĩ - Tác giả ca khúc 'Hà Nội - Điện Biên Phủ trên không'.",
-      testimony: "Tôi đã sáng tác bài hát ngay trong những ngày chiến dịch, với niềm tự hào về chiến thắng vĩ đại này.",
-    },
-    {
-      id: 6,
-      name: "Nguyễn Xuân Mậu",
-      role: "Nhà báo - Nguyên phóng viên chiến trường của Báo Nhân Dân.",
-      testimony: "Từng viên đạn phòng không vẽ lên bầu trời những vòng lửa đỏ, một cảnh tượng hùng vĩ và bi tráng.",
-    },
-    {
-      id: 7,
-      name: "Nguyễn Văn Nhạ",
-      role: "Trung tá - Nguyên sĩ quan điều khiển tác chiến tại Sở chỉ huy Quân chủng Phòng không - Không quân.",
-      testimony: "Mỗi đêm chiến đấu là một thử thách, nhưng chúng tôi luôn vững tin vào chiến thắng của dân tộc.",
-    },
-    {
-      id: 8,
-      name: "Trần Hanh",
-      role: "Thượng tướng - Nguyên Tư lệnh Quân chủng Không quân Việt Nam.",
-      testimony: "Không có chiến công nào mà không phải đánh đổi bằng máu và nước mắt, nhưng đó là sự hy sinh xứng đáng.",
-    },
-    {
-      id: 9,
-      name: "Nguyễn Thế Lục",
-      role: "Cựu dân quân tự vệ Hà Nội.",
-      testimony: "Khi còi báo động vang lên, chúng tôi lập tức vào vị trí chiến đấu, quyết tâm bảo vệ thành phố.",
-    },
-    {
-      id: 10,
-      name: "Thomas Eugene Wilber",
-      role: "Con trai một phi công Mỹ từng bị giam tại Nhà tù Hỏa Lò.",
-      testimony: "Những câu chuyện về sự đối xử nhân đạo của người Việt Nam đã giúp hàn gắn vết thương chiến tranh.",
-    }
-  ];  
+  const vnAircrafts = [
+    { name: "MiG-21", role: "Tiêm kích đánh chặn", image: "https://upload.wikimedia.org/wikipedia/commons/6/68/1_Pucki_Dywizjon_Lotniczy_MiG-21_bis.jpg" },
+    { name: "MiG-19", role: "Tiêm kích cường kích", image: "https://upload.wikimedia.org/wikipedia/commons/3/36/Mig-19-6058-01.jpg" },
+    { name: "MiG-17", role: "Tiêm kích cận chiến", image: "https://www.flugzeuginfo.net/acimages/mig17_karstenpalt.jpg" },
+  ];
 
-export default function Testimonies() {
-  const [index, setIndex] = useState(0);
+  const vnSupport = [
+    { name: "SAM-2", role: "Tên lửa phòng không", image: "https://file3.qdnd.vn/data/images/0/2022/12/22/tuanson/2.jpg" },
+    { name: "Radar P-35", role: "Hệ thống radar cảnh giới", image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/P-35M_radar_in_Latvia.jpg" },
+  ]
 
-  const nextTestimony = () => {
-    setIndex((prevIndex) => (prevIndex + 1) % testimonies.length);
-  };
+  const usAircrafts = [
+    { name: "B-52 Stratofortress", role: "Máy bay ném bom chiến lược", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4uFcB9BR_2e1-pZQdR_2JEfaMeTLM0s_Dmg&s" },
+    { name: "F-4 Phantom II", role: "Tiêm kích đa nhiệm", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/QF-4_Holloman_AFB.jpg/1200px-QF-4_Holloman_AFB.jpg" },
+    { name: "A-6 Intruder", role: "Máy bay cường kích", image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Grumman_KA-6D_Intruder_of_VA-34_in_flight%2C_in_1988.jpg" },
+  ];
 
-  const prevTestimony = () => {
-    setIndex((prevIndex) => (prevIndex - 1 + testimonies.length) % testimonies.length);
-  };
+  const usSupport = [
+    { name: "EB-66", role: "Máy bay tác chiến điện tử - gây nhiễu radar", image: "https://media.defense.gov/2006/Nov/03/2000537037/2000/2000/0/061103-F-1234P-008.JPG" },
+    { name: "KC-135 Stratotanker", role: "Máy bay tiếp nhiên liệu", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6spg0eY-mK0cV3MSJRv3E8WtHewSFbrBITA&s" },
+  ]
 
   return (
-    <div style={{ maxWidth: "600px", margin: "auto", textAlign: "center", padding: "20px" }}>
-      <div style={{padding: "20px", borderRadius: "10px", background: "#f9f9f950", color: "#333" }}>
-        <h3 style={{color: "#CC0000", fontSize: "30px"}}>{testimonies[index].name}</h3>
-        <p><strong>{testimonies[index].role}</strong></p>
-        <p>"{testimonies[index].testimony}"</p>
+    <div style={styles.container}>
+      {/* Cột của Việt Nam */}
+      <div style={styles.column}>
+        <h2 style={styles.title}>Không quân Việt Nam</h2>
+        <p style={styles.overview}>{vnOverview}</p>
+        {vnAircrafts.map((plane, index) => (
+          <div key={index} style={styles.card}>
+            <img src={plane.image} alt={plane.name} style={styles.image} />
+            <h3>{plane.name}</h3>
+            <p>{plane.role}</p>
+          </div>
+        ))}
+
+
+      <h2 style={styles.title2}>Hỗ trợ chiến đấu</h2>
+        {vnSupport.map((plane, index) => (
+          <div key={index} style={styles.card}>
+            <img src={plane.image} alt={plane.name} style={styles.image} />
+            <h3>{plane.name}</h3>
+            <p>{plane.role}</p>
+          </div>
+        ))}
       </div>
-      <button onClick={prevTestimony} style={{ margin: "10px" }}>⬅️ Trước</button>
-      <button onClick={nextTestimony} style={{ margin: "10px" }}>Tiếp ➡️</button>
+
+      {/* Cột của Mỹ */}
+      <div style={styles.column}>
+        <h2 style={styles.title}>Không quân Mỹ</h2>
+        <p style={styles.overview}>{usOverview}</p>
+        {usAircrafts.map((plane, index) => (
+          <div key={index} style={styles.card}>
+            <img src={plane.image} alt={plane.name} style={styles.image} />
+            <h3>{plane.name}</h3>
+            <p>{plane.role}</p>
+          </div>
+        ))}
+
+
+        <h2 style={styles.title2}>Hỗ trợ chiến đấu</h2>
+          {usSupport.map((plane, index) => (
+            <div key={index} style={styles.card}>
+              <img src={plane.image} alt={plane.name} style={styles.image} />
+              <h3>{plane.name}</h3>
+              <p>{plane.role}</p>
+            </div>
+          ))}
+      </div>
     </div>
   );
 }
+
+const styles = {
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+    padding: "20px",
+  },
+  column: {
+    flex: 1,
+    maxWidth: "400px",
+  },
+  title: {
+    textAlign: "center",
+    color: "#eee",
+  },
+  title2: {
+    textAlign: "center",
+    color: "#eee",
+    margin: "50px 0 20px 0"
+  },
+  overview: {
+    textAlign: "center",
+    fontStyle: "italic",
+    marginBottom: "10px",
+    color: "#ccc",
+  },
+  card: {
+    background: "#f9f9f930",
+    borderRadius: "8px",
+    padding: "15px",
+    textAlign: "center",
+    boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
+    marginBottom: "15px",
+  },
+  image: {
+    width: "100%",
+    height: "280px",
+    borderRadius: "5px",
+    objectFit: "cover",
+  },
+};
